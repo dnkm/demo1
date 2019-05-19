@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(45deg, teal, purple);
+  min-height: 100vh;
+  color: white;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Calendar {
+  --border-style: 0.5px solid rgba(100, 100, 100, 0.3);
+}
+
+.Calendar h1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Calendar .cells {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: var(--border-style);
+  border-left: var(--border-style);
+}
+
+.Calendar .cells > div {
+  width: calc(100% / 7);
+  border-bottom: var(--border-style);
+  border-right: var(--border-style);
+  padding: 10px;
+}
+
+.Calendar .cells > .header {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.Calendar .cells .event {
+  color: lime;
+}
+
+.AddForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.8);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddForm form {
+  padding: 50px;
+  background: white;
+}
